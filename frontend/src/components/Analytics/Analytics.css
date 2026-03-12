@@ -1,0 +1,66 @@
+.analytics {
+  padding: 1rem;
+}
+
+.section-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  color: #1a1a2e;
+}
+
+.analytics-card {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  margin-bottom: 1rem;
+}
+
+.analytics-card h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0.8rem;
+}
+
+.analytics-card.wide {
+  width: 100%;
+}
+
+.analytics-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.kpi-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.kpi-table th {
+  background: #f5f7fa;
+  padding: 0.5rem 0.8rem;
+  border-bottom: 2px solid #e0e0e0;
+  text-align: left;
+  font-weight: 600;
+}
+
+.kpi-table td {
+  padding: 0.5rem 0.8rem;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.kpi-table tr:last-child td {
+  border-bottom: none;
+}
+
+.loading {
+  padding: 2rem;
+  text-align: center;
+  color: #888;
+}

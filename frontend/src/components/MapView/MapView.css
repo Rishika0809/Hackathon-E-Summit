@@ -1,0 +1,80 @@
+.map-view {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.map-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem 1rem;
+  background: white;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.toggle-btn {
+  padding: 0.4rem 1rem;
+  border: 1px solid #1a73e8;
+  background: white;
+  color: #1a73e8;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background 0.2s;
+}
+
+.toggle-btn.active {
+  background: #1a73e8;
+  color: white;
+}
+
+.map-count {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.leaflet-map {
+  flex: 1;
+  min-height: 450px;
+  z-index: 0;
+}
+
+.map-loading {
+  padding: 0.5rem 1rem;
+  color: #666;
+  font-size: 0.85rem;
+}
+
+.map-legend {
+  display: flex;
+  gap: 1rem;
+  padding: 0.5rem 1rem;
+  background: white;
+  border-top: 1px solid #e0e0e0;
+  font-size: 0.8rem;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.popup-content {
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.popup-date {
+  color: #888;
+  font-size: 0.75rem;
+  margin-top: 0.3rem;
+}

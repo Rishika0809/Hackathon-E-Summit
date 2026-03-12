@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  background: #f5f7fa;
+  color: #1a1a2e;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-header {
+  background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+  color: white;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.header-icon {
+  font-size: 2.2rem;
+}
+
+.header-brand h1 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+}
+
+.header-brand p {
+  font-size: 0.75rem;
+  opacity: 0.75;
+  margin-top: 0.1rem;
+}
+
+.header-upload {
+  display: flex;
+  align-items: center;
+}
+
+.upload-btn {
+  padding: 0.5rem 1.2rem;
+  background: #1a73e8;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+
+.upload-btn:hover:not(.loading) {
+  background: #1557b0;
+}
+
+.upload-btn.loading {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.upload-banner {
+  padding: 0.6rem 1.5rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border-bottom: 1px solid transparent;
+}
+
+.upload-banner.success {
+  background: #e8f5e9;
+  color: #2e7d32;
+  border-color: #a5d6a7;
+}
+
+.upload-banner.error {
+  background: #fce4ec;
+  color: #b71c1c;
+  border-color: #ef9a9a;
+}
+
+.upload-banner.info {
+  background: #e3f2fd;
+  color: #1565c0;
+  border-color: #90caf9;
+}
+
+.app-nav {
+  background: white;
+  border-bottom: 2px solid #e0e0e0;
+  display: flex;
+  overflow-x: auto;
+  padding: 0 0.5rem;
+}
+
+.nav-tab {
+  padding: 0.75rem 1.2rem;
+  border: none;
+  background: none;
+  color: #555;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-bottom: 3px solid transparent;
+  transition: color 0.15s, border-color 0.15s;
+  white-space: nowrap;
+}
+
+.nav-tab:hover {
+  color: #1a73e8;
+}
+
+.nav-tab.active {
+  color: #1a73e8;
+  border-bottom-color: #1a73e8;
+  font-weight: 600;
+}
+
+.app-content {
+  flex: 1;
+  overflow: auto;
+}
+
+.app-footer {
+  background: #1a1a2e;
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  padding: 0.7rem;
+  font-size: 0.75rem;
+}
