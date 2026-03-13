@@ -1,0 +1,149 @@
+.pothole-list {
+  padding: 1rem;
+}
+
+.list-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.list-header h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1a1a2e;
+}
+
+.filters {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.filters select {
+  padding: 0.35rem 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  background: white;
+  cursor: pointer;
+}
+
+.pothole-table-wrapper {
+  overflow-x: auto;
+}
+
+.pothole-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.pothole-table th {
+  background: #f5f7fa;
+  border-bottom: 2px solid #e0e0e0;
+  padding: 0.6rem 0.8rem;
+  text-align: left;
+  font-weight: 600;
+  color: #333;
+}
+
+.pothole-table td {
+  padding: 0.5rem 0.8rem;
+  border-bottom: 1px solid #f0f0f0;
+  vertical-align: middle;
+}
+
+.pothole-row:hover {
+  background: #f0f7ff;
+  cursor: pointer;
+}
+
+.badge {
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.badge-minor { background: #e8f5e9; color: #2e7d32; }
+.badge-moderate { background: #fff8e1; color: #f57f17; }
+.badge-severe { background: #fce4ec; color: #b71c1c; }
+
+.status-tag {
+  font-size: 0.75rem;
+  color: #555;
+  text-transform: capitalize;
+}
+
+.location-cell {
+  max-width: 180px;
+}
+
+.coords {
+  font-size: 0.7rem;
+  color: #888;
+}
+
+.risk-badge {
+  padding: 0.15rem 0.5rem;
+  border-radius: 10px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.risk-critical { background: #fce4ec; color: #c62828; }
+.risk-high { background: #fff3e0; color: #e65100; }
+.risk-medium { background: #fff8e1; color: #f57f17; }
+.risk-low { background: #e8f5e9; color: #2e7d32; }
+
+.btn-file {
+  padding: 0.3rem 0.8rem;
+  background: #1a73e8;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.75rem;
+  transition: background 0.2s;
+}
+
+.btn-file:hover:not(:disabled) { background: #1557b0; }
+.btn-file:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.filed-tag {
+  font-size: 0.75rem;
+  color: #34a853;
+  font-weight: 600;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  font-size: 0.85rem;
+}
+
+.pagination button {
+  padding: 0.3rem 0.8rem;
+  border: 1px solid #ccc;
+  background: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.pagination button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.loading, .empty {
+  padding: 2rem;
+  text-align: center;
+  color: #888;
+}

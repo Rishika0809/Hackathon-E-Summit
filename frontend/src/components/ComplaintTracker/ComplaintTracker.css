@@ -1,0 +1,145 @@
+.complaint-tracker {
+  padding: 1rem;
+}
+
+.tracker-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.tracker-header h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1a1a2e;
+}
+
+.tracker-actions {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.tracker-actions select {
+  padding: 0.35rem 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.8rem;
+}
+
+.btn-escalate {
+  padding: 0.4rem 0.9rem;
+  background: #e53935;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.btn-escalate:hover:not(:disabled) { background: #b71c1c; }
+.btn-escalate:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.escalation-result {
+  background: #e8f5e9;
+  border: 1px solid #a5d6a7;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  color: #2e7d32;
+  margin-bottom: 1rem;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.complaint-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+}
+
+.complaint-table th {
+  background: #f5f7fa;
+  border-bottom: 2px solid #e0e0e0;
+  padding: 0.5rem 0.7rem;
+  text-align: left;
+  font-weight: 600;
+  color: #333;
+}
+
+.complaint-table td {
+  padding: 0.45rem 0.7rem;
+  border-bottom: 1px solid #f0f0f0;
+  vertical-align: middle;
+}
+
+.tracking-id {
+  font-family: monospace;
+  font-size: 0.78rem;
+  color: #555;
+}
+
+.status-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 0.3rem;
+  vertical-align: middle;
+}
+
+.status-text {
+  text-transform: capitalize;
+}
+
+.escalation-badge {
+  background: #ff6d00;
+  color: white;
+  padding: 0.1rem 0.4rem;
+  border-radius: 10px;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.btn-verify {
+  padding: 0.25rem 0.65rem;
+  background: #34a853;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.75rem;
+}
+
+.btn-verify:hover { background: #2e7d32; }
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  font-size: 0.85rem;
+}
+
+.pagination button {
+  padding: 0.3rem 0.8rem;
+  border: 1px solid #ccc;
+  background: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.pagination button:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.loading, .empty {
+  padding: 2rem;
+  text-align: center;
+  color: #888;
+}
