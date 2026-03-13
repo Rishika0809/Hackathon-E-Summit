@@ -115,6 +115,7 @@ class ComplaintFiler:
     def _select_portal(self, pothole: Pothole) -> PortalType:
         # State-specific portals first, fall back to PG Portal
         state_portals = {
+            "Chhattisgarh": PortalType.STATE_PORTAL,
             "Maharashtra": PortalType.STATE_PORTAL,
             "Delhi": PortalType.MUNICIPAL,
         }

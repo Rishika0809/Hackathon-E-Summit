@@ -182,7 +182,7 @@ pytest tests/test_api.py -v
 
 ## 6. Production Considerations
 
-- Replace mock portal API with real PG Portal / state portal credentials
+- Replace mock portal API with real Chhattisgarh state grievance portal / PG Portal credentials
 - Add authentication (JWT) to all API endpoints
 - Set up SSL/TLS via nginx with Let's Encrypt
 - Configure Celery beat for scheduled escalation checks

@@ -114,9 +114,9 @@ class TestGeoLocator:
         from app.utils.geolocation import GeoLocator
         locator = GeoLocator()
         locator.geocoder = None  # force mock
-        info = locator.reverse_geocode(20.5, 78.5)
-        assert info.latitude == 20.5
-        assert info.longitude == 78.5
+        info = locator.reverse_geocode(21.25, 81.63)
+        assert info.latitude == 21.25
+        assert info.longitude == 81.63
         assert info.state is not None
 
     def test_haversine_distance(self):

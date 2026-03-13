@@ -41,7 +41,7 @@ const MapView: React.FC<MapViewProps> = ({ selectedPothole }) => {
 
   const center: [number, number] = selectedPothole
     ? [selectedPothole.latitude, selectedPothole.longitude]
-    : [20.5937, 78.9629]; // India center
+    : [21.2514, 81.6296]; // Raipur, Chhattisgarh center
 
   return (
     <div className="map-view">
@@ -57,7 +57,7 @@ const MapView: React.FC<MapViewProps> = ({ selectedPothole }) => {
 
       {loading && <div className="map-loading">Loading map data...</div>}
 
-      <MapContainer center={center} zoom={5} className="leaflet-map" scrollWheelZoom>
+      <MapContainer center={center} zoom={7} className="leaflet-map" scrollWheelZoom>
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

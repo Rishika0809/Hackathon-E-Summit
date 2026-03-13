@@ -1,6 +1,11 @@
 """
 Training script for pothole detection model.
 Fine-tunes YOLOv8 on a pothole dataset.
+
+Recommended datasets for Chhattisgarh roads:
+  - RDD2022 India subset (https://github.com/sekilab/RoaddamageDetector)
+  - Kaggle Pothole Detection (https://www.kaggle.com/datasets/sachinpatel21/pothole-image-dataset)
+  - Custom dashcam/drone imagery from NH-130, NH-30, NH-43, NH-53 corridors
 """
 import os
 import sys

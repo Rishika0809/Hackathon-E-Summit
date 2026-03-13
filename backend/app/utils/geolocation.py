@@ -87,12 +87,12 @@ class GeoLocator:
         return GeoInfo(
             latitude=lat,
             longitude=lon,
-            address=f"Near NH-44, Nagpur–Hyderabad Highway (approx. Lat:{lat:.4f}, Lon:{lon:.4f})",
-            road_name="NH-44",
-            highway_name="NH-44",
+            address=f"Near NH-130, Raipur–Bilaspur Highway, Chhattisgarh (approx. Lat:{lat:.4f}, Lon:{lon:.4f})",
+            road_name="NH-130",
+            highway_name="NH-130",
             km_marker=f"KM {int(abs(lat * 10) % 500)}",
-            state="Maharashtra",
-            district="Nagpur",
+            state="Chhattisgarh",
+            district="Raipur",
         )
 
     def estimate_km_marker(self, lat: float, lon: float, highway_start_lat: float, highway_start_lon: float) -> str:
