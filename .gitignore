@@ -14,7 +14,9 @@ build/
 
 # Environment
 .env
+.env.*
 *.env
+!.env.example
 
 # Uploads
 backend/uploads/
