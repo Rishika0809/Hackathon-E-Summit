@@ -1,0 +1,29 @@
+# YOLOv8 Dataset Configuration
+# Copy this file to data.yaml and update the paths to match your dataset location.
+#
+# Expected directory structure:
+#   data/
+#   ├── train/
+#   │   ├── images/    # Training images (.jpg, .png)
+#   │   └── labels/    # YOLO-format .txt annotation files
+#   ├── val/
+#   │   ├── images/    # Validation images
+#   │   └── labels/    # Validation annotations
+#   └── test/          # (optional)
+#       ├── images/
+#       └── labels/
+#
+# Each label .txt file has one line per object:
+#   <class_id> <x_center> <y_center> <width> <height>
+# All values are normalized to [0, 1] relative to image dimensions.
+
+path: ./data          # Root directory of the dataset
+train: train/images   # Training images (relative to 'path')
+val: val/images       # Validation images (relative to 'path')
+test: test/images     # Test images (optional, relative to 'path')
+
+# Class names
+names:
+  0: pothole
+  1: crack
+  2: road_damage
