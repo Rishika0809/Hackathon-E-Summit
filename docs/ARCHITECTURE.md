@@ -2,6 +2,8 @@
 
 ## System Overview
 
+The Autonomous Pothole Intelligence System is configured for **Chhattisgarh state highways** (NH-130, NH-30, NH-43, NH-53, NH-130A).
+
 ```
 ┌─────────────────────────────────────────────────────────────────┐
 │                     Data Sources                                  │

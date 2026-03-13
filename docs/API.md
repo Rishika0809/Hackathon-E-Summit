@@ -57,8 +57,8 @@ Upload a road image for pothole detection.
   "potholes": [
     {
       "id": 1,
-      "latitude": 20.5937,
-      "longitude": 78.9629,
+      "latitude": 21.2514,
+      "longitude": 81.6296,
       "severity": "moderate",
       "status": "classified",
       "depth_cm": 8.5,
@@ -87,7 +87,7 @@ List all detected potholes with optional filters.
 **Query Parameters:**
 - `severity`: `minor` | `moderate` | `severe`
 - `status`: `detected` | `classified` | `complaint_filed` | `in_progress` | `resolved` | `verified` | `escalated`
-- `state`: State name filter
+- `state`: State name filter (default scope: Chhattisgarh)
 - `min_risk`: Minimum risk score
 - `skip`: Pagination offset (default: 0)
 - `limit`: Results per page (default: 100)
@@ -112,7 +112,7 @@ Get risk heat map data points for frontend visualization.
 ```json
 {
   "points": [
-    { "lat": 20.5937, "lon": 78.9629, "intensity": 0.75, "severity": "severe", "pothole_id": 1 }
+    { "lat": 21.2514, "lon": 81.6296, "intensity": 0.75, "severity": "severe", "pothole_id": 1 }
   ],
   "total": 45
 }

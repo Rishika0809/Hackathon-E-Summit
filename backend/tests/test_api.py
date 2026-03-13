@@ -83,7 +83,7 @@ class TestDetectionAPI:
             resp = client.post(
                 "/api/detect/",
                 files={"file": ("test.jpg", img, "image/jpeg")},
-                data={"latitude": "20.5", "longitude": "78.9", "source_type": "dashcam"},
+                data={"latitude": "21.25", "longitude": "81.63", "source_type": "dashcam"},
             )
         assert resp.status_code == 200
         data = resp.json()
@@ -94,7 +94,7 @@ class TestDetectionAPI:
         resp = client.post(
             "/api/detect/",
             files={"file": ("empty.jpg", b"", "image/jpeg")},
-            data={"latitude": "20.5", "longitude": "78.9"},
+            data={"latitude": "21.25", "longitude": "81.63"},
         )
         assert resp.status_code == 400
 
@@ -107,7 +107,7 @@ class TestPotholeAPI:
             resp = client.post(
                 "/api/detect/",
                 files={"file": ("test.jpg", img, "image/jpeg")},
-                data={"latitude": "20.5", "longitude": "78.9", "source_type": "dashcam"},
+                data={"latitude": "21.25", "longitude": "81.63", "source_type": "dashcam"},
             )
         data = resp.json()
         if data.get("potholes"):
@@ -148,7 +148,7 @@ class TestComplaintsAPI:
             resp = client.post(
                 "/api/detect/",
                 files={"file": ("test.jpg", img, "image/jpeg")},
-                data={"latitude": "20.5", "longitude": "78.9", "source_type": "dashcam"},
+                data={"latitude": "21.25", "longitude": "81.63", "source_type": "dashcam"},
             )
         data = resp.json()
         if data.get("potholes"):

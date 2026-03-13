@@ -14,13 +14,14 @@ from app.models.pothole import Pothole, SeverityLevel, PotholeStatus
 from app.models.complaint import Complaint, ComplaintStatus, PortalType
 from app.models.resolution import Resolution
 
-# India highway corridors for seed data
+# Chhattisgarh highway corridors for seed data
 HIGHWAYS = [
-    {"name": "NH-44", "state": "Maharashtra", "district": "Nagpur", "lat_range": (20.0, 21.5), "lon_range": (78.5, 79.5)},
-    {"name": "NH-48", "state": "Karnataka", "district": "Bengaluru Rural", "lat_range": (12.5, 14.0), "lon_range": (77.0, 78.0)},
-    {"name": "NH-19", "state": "Uttar Pradesh", "district": "Varanasi", "lat_range": (25.0, 26.0), "lon_range": (82.0, 83.5)},
-    {"name": "NH-27", "state": "Rajasthan", "district": "Jaipur", "lat_range": (26.5, 27.5), "lon_range": (75.5, 77.0)},
-    {"name": "NH-16", "state": "Andhra Pradesh", "district": "Visakhapatnam", "lat_range": (17.0, 18.5), "lon_range": (82.0, 83.5)},
+    {"name": "NH-130", "state": "Chhattisgarh", "district": "Raipur", "lat_range": (21.1, 21.4), "lon_range": (81.5, 81.8)},
+    {"name": "NH-30", "state": "Chhattisgarh", "district": "Bilaspur", "lat_range": (22.0, 22.4), "lon_range": (82.0, 82.3)},
+    {"name": "NH-43", "state": "Chhattisgarh", "district": "Durg", "lat_range": (21.1, 21.3), "lon_range": (81.2, 81.5)},
+    {"name": "NH-53", "state": "Chhattisgarh", "district": "Raigarh", "lat_range": (21.8, 22.1), "lon_range": (83.2, 83.5)},
+    {"name": "NH-30", "state": "Chhattisgarh", "district": "Bastar", "lat_range": (19.0, 19.4), "lon_range": (81.9, 82.2)},
+    {"name": "NH-130A", "state": "Chhattisgarh", "district": "Korba", "lat_range": (22.3, 22.5), "lon_range": (82.6, 82.8)},
 ]
 
 
