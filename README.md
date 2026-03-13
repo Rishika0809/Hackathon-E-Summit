@@ -10,6 +10,63 @@ Build a system that autonomously detects potholes on highway stretches, geolocat
 
 The system must process road surface data at scale and produce actionable and trackable grievance records that do not get lost in a queue.
 
+## Project Status
+
+| Component | Status | Notes |
+|-----------|--------|-------|
+| FastAPI Backend | ✅ Complete | All 12 core API endpoints operational |
+| Database Schema | ✅ Complete | Pothole, Complaint, Resolution models with relationships |
+| YOLOv8 CV Pipeline | ✅ Complete | Real detection + mock fallback when model/GPU unavailable |
+| Severity Classification | ✅ Complete | Minor/moderate/severe scoring from dimensions |
+| Risk Analysis Engine | ✅ Complete | Multi-factor scoring (severity, traffic, speed, location) |
+| Complaint Filing | ✅ Complete | Mock portal integration, ready for real API swap-in |
+| Escalation Tracking | ✅ Complete | 7/14/30-day escalation logic |
+| Resolution Verification | ✅ Complete | Before/after comparison workflow |
+| React Frontend | ✅ Complete | Dashboard, Map, Pothole List, Analytics, Complaint Tracker |
+| Docker Deployment | ✅ Complete | Multi-container docker-compose setup |
+| Documentation | ✅ Complete | API, Architecture, and Deployment guides |
+| Test Suite | ✅ Complete | pytest unit and integration tests |
+| Seed Data Script | ✅ Complete | Generates 30 demo potholes across 5 Indian highway corridors |
+| Government Portal API | 🟡 Mocked | Uses mock responses; ready for real portal integration |
+| Redis/Celery Tasks | 🟡 Configured | Infrastructure set up, not fully wired for production |
+| Authentication | 🟡 Scaffolded | JWT infrastructure present, not enforced on endpoints |
+| Real Dataset Bundle | ❌ Not included | See [Dataset](#dataset) section for recommended sources |
+
+## Dataset
+
+### Demo / Development Data
+
+The project ships with a **synthetic data seeder** (`scripts/seed_data.py`) that generates 30 sample potholes, associated complaints, and resolutions across five Indian highway corridors (NH-44, NH-48, NH-19, NH-27, NH-16). This data is intended for demo and local development — run it with:
+
+```bash
+python scripts/seed_data.py
+```
+
+### Training Data (YOLOv8)
+
+The ML training script (`backend/ml/train.py`) expects a **YOLOv8-format dataset** described by a `data.yaml` file. No training dataset is bundled in this repository. A sample `data.yaml` is provided at `backend/ml/data.yaml.example` to illustrate the expected format.
+
+#### Recommended Public Pothole Datasets
+
+| Dataset | Source | Format | Size |
+|---------|--------|--------|------|
+| [Roboflow Pothole Dataset](https://universe.roboflow.com/search?q=pothole) | Roboflow Universe | YOLOv8-native export | Varies (1k–10k+ images) |
+| [Kaggle Pothole Detection](https://www.kaggle.com/datasets/sachinpatel21/pothole-image-dataset) | Kaggle | Images + annotations | ~700 images |
+| [Pothole Detection Dataset (Atikul Islam)](https://www.kaggle.com/datasets/atulyakumar98/pothole-detection-dataset) | Kaggle | YOLO-format annotations | ~700 images |
+
+To train on a dataset:
+
+```bash
+# Download a dataset and place it in backend/ml/data/
+# Ensure the data.yaml points to the correct paths
+cd backend
+python ml/train.py --data ml/data.yaml --epochs 50 --batch 16
+```
+
+### Runtime / Inference Data
+
+At runtime, the system accepts real images (satellite, drone, or dashcam) via the `POST /api/detect/` endpoint. GPS coordinates are extracted from EXIF metadata when available, or can be provided manually. When the YOLOv8 model is not available (e.g., no GPU, no weights file), the pipeline automatically falls back to mock detection for development purposes.
+
 ## Key Features
 
 - **Computer Vision Detection**: YOLOv8-based pothole detection with mock fallback for satellite/drone/dashcam imagery
