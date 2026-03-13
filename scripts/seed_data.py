@@ -20,7 +20,7 @@ HIGHWAYS = [
     {"name": "NH-30", "state": "Chhattisgarh", "district": "Bilaspur", "lat_range": (22.0, 22.4), "lon_range": (82.0, 82.3)},
     {"name": "NH-43", "state": "Chhattisgarh", "district": "Durg", "lat_range": (21.1, 21.3), "lon_range": (81.2, 81.5)},
     {"name": "NH-53", "state": "Chhattisgarh", "district": "Raigarh", "lat_range": (21.8, 22.1), "lon_range": (83.2, 83.5)},
-    {"name": "NH-30", "state": "Chhattisgarh", "district": "Bastar", "lat_range": (19.0, 19.4), "lon_range": (81.9, 82.2)},
+    {"name": "NH-63", "state": "Chhattisgarh", "district": "Bastar", "lat_range": (19.0, 19.4), "lon_range": (81.9, 82.2)},
     {"name": "NH-130A", "state": "Chhattisgarh", "district": "Korba", "lat_range": (22.3, 22.5), "lon_range": (82.6, 82.8)},
 ]
 

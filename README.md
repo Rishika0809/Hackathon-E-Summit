@@ -20,7 +20,7 @@ This system is specifically configured for **Chhattisgarh** roads and highways:
 | NH-30 | Raipur–Bilaspur–Ambikapur | Bilaspur |
 | NH-43 | Raipur–Durg–Rajnandgaon | Durg |
 | NH-53 | Bilaspur–Raigarh–Jharsuguda | Raigarh |
-| NH-30 | Jagdalpur–Konta (Bastar) | Bastar |
+| NH-63 | Jagdalpur–Vizag (Bastar) | Bastar |
 | NH-130A | Bilaspur–Korba–Katghora | Korba |
 
 ## Dataset
